@@ -67,8 +67,6 @@ public class SecurityConfig {
                                 "/api/auth/**"  // endpoints d'authentification
                         ).permitAll()
                         // Configuration des rôles
-                        .requestMatchers("/api/employee/**").hasAnyRole("EMPLOYEE", "IT_SUPPORT")
-                        .requestMatchers("/api/support/**").hasRole("IT_SUPPORT")
                         .anyRequest().authenticated()
                 )
 
